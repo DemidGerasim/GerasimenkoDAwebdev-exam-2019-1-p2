@@ -24,7 +24,7 @@ function addRow()
     row.appendChild(td2);
 
     // наполняем ячейки
-    td1.innerHTML =a+' ' + date+' '+description +'<a href="#" date-action="delete">X</a>';
+    td1.innerHTML =a+' '+ date+' '+description +'<a href="#" date-action="delete">X</a>';
     a++;
 
     return false;
