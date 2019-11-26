@@ -33,7 +33,6 @@ function addRow()
 document.addEventListener('click', function(event) {
 
     if (event.target.dataset!= undefined) { 
-      event.target
+      event.target.closest('tr').remove()
     }
-
   });
