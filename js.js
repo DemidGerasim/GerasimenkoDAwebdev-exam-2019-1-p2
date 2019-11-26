@@ -1,7 +1,7 @@
 var d = document;
 var date;
 var description;
-
+var a = 0;
 function addRow()
 {
     // считываем значени¤ с формы
@@ -24,8 +24,16 @@ function addRow()
     row.appendChild(td2);
 
     // наполняем ячейки
-    td1.innerHTML = date+' '+description;
+    td1.innerHTML =a+' ' + date+' '+description +'<a href="#" date-action="delete">X</a>';
+    a++;
 
     return false;
 }
 
+document.addEventListener('click', function(event) {
+
+    if (event.target.dataset!= undefined) { 
+      event.target
+    }
+
+  });
