@@ -10,40 +10,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Инциденты</title>
+    <title>Главная</title>
 </head>
 
 <body>
-    <form action="" id="add_persons" method="post" onsubmit="addRow();return false;">
-        <fieldset>
-            <legend>Добавить инцидент</legend>
-            <ul>
-                <li>
-                    <label for="date">Дата:</label>
-                    <input type="date" name="date" id="date" size="30" tabindex="1" />
-                </li>
-                <li>
-                    <label for="description">Описание:</label>
-                    <input type="text" name="description" id="description" value="" size="30" tabindex="2" />
-                </li>
-                <input type="submit" name="subm" class="submit" value="Добавить" tabindex="4" />
+        <div class="container">
 
-            </ul>
-        </fieldset>
-    </form>
-    >
-    <table class="table" id="tab1" onclick='alert(this.rows.length)'>
-        <thead class="thead-inverse">
-            <tr>
-                <th>id</th>
-                <th>Дата</th>
-                <th>Описание инцидентов</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+                <label for="Date">Дата:</label>
+                <input name="Date" class="form-control" id="Date" type="Date"><br>
+                <label for="Comment">Описание:</label>
+                <textarea name="Comment" class="form-control" id="description" type="text"></textarea><br>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button id="add" class="btn btn-dark btn-block " onclick="addRow(); return false;">Добавить</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button id="add" class="btn btn-dark btn-block " onclick="delAll(); return false;">Очистить таблицу</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <table class="table table-bordered table-responsive-md table-striped text-center" id="table" class="border">
+                        <input name="n1" class="form-control" value="0" id="count" type="text" disabled><br>
+                        <tr>
+                            <th>id</th>
+                            <th>Дата</th>
+                            <th>Описание</th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -57,5 +55,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
