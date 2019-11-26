@@ -9,7 +9,7 @@ function addRow()
     description = d.getElementById('description').value;
 
     // находим нужную таблицу
-    var tbody = d.getElementById('tab1').getElementsByTagName('TBODY')[0];
+    var tbody = d.getElementById('tab1');
 
     // создаем строку таблицы и добавляем ее
     var row = d.createElement("TR");
@@ -24,7 +24,7 @@ function addRow()
     row.appendChild(td2);
 
     // наполняем ячейки
-    td1.innerHTML =a+' '+ date+' '+description +'<a href="#" date-action="delete">X</a>';
+    td1.innerHTML =a +' '+ date +' '+ description +'<a href="#" date-action="delete">X</a>';
     a++;
 
     return false;
