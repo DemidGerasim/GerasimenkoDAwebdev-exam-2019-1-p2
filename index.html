@@ -14,33 +14,38 @@
 </head>
 
 <body>
-            <form action="" id="add_persons" method="post" onsubmit="add();return false;">
-                <fieldset>
-                    <legend>Добавить инцидент</legend>
-                    <ul>
-                        <li>
-                            <label for="date">Дата:</label>
-                            <input type="date" name="date" id="date" size="30" tabindex="1" />
-                        </li>
-                        <li>
-                            <label for="description">Описание:</label>
-                            <input type="text" name="description" id="description" size="30" tabindex="2" />
-                        </li>
-                        <input type="submit" name="sub" class="submit" value="Добавить" tabindex="4" />
-                        </li>
-                    </ul>
-                </fieldset>
+    <form action="" id="add_persons" method="post" onsubmit="addRow();return false;">
+        <fieldset>
+            <legend>Добавить инцидент</legend>
+            <ul>
+                <li>
+                    <label for="date">Дата:</label>
+                    <input type="date" name="date" id="date" size="30" tabindex="1" />
+                </li>
+                <li>
+                    <label for="description">Описание:</label>
+                    <input type="text" name="description" id="description" value="" size="30" tabindex="2" />
+                </li>
+                <input type="submit" name="subm" class="submit" value="Добавить" tabindex="4" />
 
-                <table id="t1" class="sortable">
-                    <thead>
-                        <tr>
-                            <th>Дата</th>
-                            <th>Описание инцидентов</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+            </ul>
+        </fieldset>
+    </form>
+    <div class="col-md-8 my-4 border border-white rounded" id="main">
+        <div class="container text-center">
+            <table id="tab1" class="sortable">
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Описание инцидентов</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
